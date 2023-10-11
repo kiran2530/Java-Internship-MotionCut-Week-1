@@ -27,17 +27,20 @@ public class Guessing_Game {
                 System.out.println("\t\t\t ==================================================\n");
                 break;
             }
+            else if(UserNo < 1 || UserNo > 100) {
+                System.out.println("\t\t\t Oops!.. Guess is between 1-100.");
+            }
             else if(UserNo > cpuNO) {
                 System.out.println("\t\t\t Oops!.. Guess is High.");
             }
             else if(UserNo < cpuNO) {
                 System.out.println("\t\t\t Oops!.. Guess is low.");
             }
-            else if(UserNo > cpuNO) {
-                System.out.println("\t\t\t Oops!.. Guess is between 1-100.");
-            }
 
             System.out.println("\t\t\t --------------------------------------------------\n");
+            
         }while(UserNo != cpuNO);
+
+        sc.close();
     }
 }
